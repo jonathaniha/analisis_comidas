@@ -24,13 +24,25 @@ print('¿Cuál es el alimento más calórico del menú?')
 #print(df.loc[df['Calories'].idxmax(), ['Item', 'Calories']])
 print(df.sort_values('Calories', ascending=False).head(5)[['Item', 'Calories']])
 
+
+
+
 print('¿Cuál tiene más proteína?')
 print(df.loc[df['Protein'].idxmax(), ['Item', 'Protein']])
 
+
+
 print('Promedio de calorías por tipo de comida:')
+
+
+
+
 print(df.groupby('Category')['Calories'].mean().sort_values(ascending=False))
 
 print('Proporción entre proteína y grasa (indicador de "saludable"):')
+
+
+
 df['Protein_to_Fat'] = df['Protein'] / df['Total Fat']
 print(df.sort_values('Protein_to_Fat', ascending=False).head(10))
 

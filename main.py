@@ -57,7 +57,7 @@ st.bar_chart(df2.set_index("Item")["Protein"])
 # 3) Scatter Plot: Relación entre calorías y proteína
 # =========================================
 st.subheader("Relación entre Calorías y Proteína")
-st.scatter_chart(df2, x="Calories", y="Protein")
+st.scatter_chart(df2.set_index("Item"), x="Calories", y="Protein")
 
 
 # =========================================
